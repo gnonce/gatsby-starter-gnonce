@@ -1,5 +1,4 @@
 import { createGlobalStyle } from 'styled-components'
-import { media } from './styleUtils'
 
 export default createGlobalStyle`
   body{
@@ -7,10 +6,4 @@ export default createGlobalStyle`
     margin: 0;
     background: #FBFBFB; 
   }
-
-  ${media.sm`
-    h1 {
-      font-size: 45px;
-    }
-  `}
 `
