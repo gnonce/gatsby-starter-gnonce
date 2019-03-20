@@ -2,8 +2,16 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
+import Image from '../components/Image'
+import Heading from '../components/Heading'
+
 interface IndexPageProps {
   data: {
+    image: {
+      childImageSharp: {
+        fluid: any
+      }
+    }
     site: {
       siteMetadata: {
         name: string
@@ -19,27 +27,24 @@ const Wrapper = styled.div`
   align-items: center;
 `
 
-const Title = styled.h1`
-  margin: 10px;
-`
-
-const Tagline = styled.p`
-  margin: 0;
-  font-size: 20px;
-`
-
 export default (props: IndexPageProps) => {
-  const { name, tagline } = props.data.site.siteMetadata
+  const { image, site } = props.data
   return (
     <Wrapper>
-      <Title>{name}</Title>
-      <Tagline>{tagline}</Tagline>
+      <Image img={image.childImageSharp} />
+      <Heading
+        title={site.siteMetadata.name}
+        subtitle={site.siteMetadata.tagline}
+      />
     </Wrapper>
   )
 }
 
 export const indexPageQuery = graphql`
   query IndexPageQuery {
+    image: file(relativePath: { eq: "gnonce-icon.png" }) {
+      ...fluidImage
+    }
     site {
       siteMetadata {
         name
