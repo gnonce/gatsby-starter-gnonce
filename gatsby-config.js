@@ -11,6 +11,12 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/styles/typography.ts`,
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,

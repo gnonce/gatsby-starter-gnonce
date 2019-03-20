@@ -3,6 +3,8 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
 
+import { media } from '../styles/styleUtils'
+
 interface IImageProps {
   img: {
     fluid: any
@@ -15,7 +17,9 @@ const Wrapper = styled.div`
 
 const Image = styled(Img)`
   width: 200px;
-  position: absolute;
+  ${media.sm`
+    width: 150px;
+  `}
 `
 
 export default (props: IImageProps) => {
@@ -30,7 +34,7 @@ export default (props: IImageProps) => {
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
-      fluid(maxWidth: 1000) {
+      fluid(maxWidth: 200) {
         ...GatsbyImageSharpFluid
       }
     }

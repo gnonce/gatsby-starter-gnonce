@@ -10,14 +10,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  color: white;
 `
 
-const Title = styled.h1``
-
-const Subtitle = styled.p`
-  margin: 0;
-  font-size: 20px;
+const Title = styled.h1`
+  margin-top: 30px;
 `
+
+const Subtitle = styled.p``
 
 export default (props: IHeadingProps) => {
   const { title, subtitle } = props
