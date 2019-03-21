@@ -4,6 +4,8 @@ import styled, { ThemeProvider } from 'styled-components'
 import theme from '../styles/theme'
 import GlobalStyles from '../styles/globalStyles'
 
+import Head from '../components/Head'
+
 interface ILayoutProps {
   children: any
 }
@@ -16,6 +18,7 @@ export default ({ children }: ILayoutProps) => {
   return (
     <Wrapper>
       <GlobalStyles />
+      <Head pathname="moi" />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </Wrapper>
   )

@@ -1,7 +1,15 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
-    name: `Gnonce Gatsby starter`,
-    tagline: `Gatsby + Typescript + Styled Components = 💖`,
+    title: `Gnonce Gatsby starter`,
+    titleShort: `Gnonce starter`,
+    titleTemplate: `%s - Gnonce`,
+    description: `Gatsby + Typescript + Styled Components = 💖`,
+    url: `https://gnonce.com`,
+    image: path.resolve(__dirname, 'src/images/gnonce-icon.png'),
+    themeColor: `#fff`,
+    twitter: 'gnonce',
   },
   plugins: [
     {
@@ -21,5 +29,6 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
   ],
 }

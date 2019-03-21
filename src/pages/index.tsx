@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 // Layout
-import Layout from '../layouts/index'
+import Layout from '../layout/index'
 
 // Components
 import Image from '../components/Image'
@@ -18,8 +18,8 @@ interface IndexPageProps {
     }
     site: {
       siteMetadata: {
-        name: string
-        tagline: string
+        title: string
+        description: string
       }
     }
   }
@@ -43,8 +43,8 @@ export default ({ data }: IndexPageProps) => {
       <Wrapper>
         <Image img={image.childImageSharp} />
         <Heading
-          title={site.siteMetadata.name}
-          subtitle={site.siteMetadata.tagline}
+          title={site.siteMetadata.title}
+          subtitle={site.siteMetadata.description}
         />
       </Wrapper>
     </Layout>
@@ -58,8 +58,8 @@ export const indexPageQuery = graphql`
     }
     site {
       siteMetadata {
-        name
-        tagline
+        title
+        description
       }
     }
   }
