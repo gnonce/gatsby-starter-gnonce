@@ -5,15 +5,15 @@ import { StaticQuery, graphql } from 'gatsby'
 interface IHeadProps {
   title?: string
   description?: string
-  image?: string
-  pathname: string
+  thumbnail?: string
   article?: boolean
+  pathname: string
 }
 
 export default ({
   title,
   description,
-  image,
+  thumbnail,
   pathname,
   article,
 }: IHeadProps) => (
@@ -22,42 +22,53 @@ export default ({
     render={({
       site: {
         siteMetadata: {
+          site,
           defaultTitle,
           titleTemplate,
           defaultDescription,
+          language,
           siteUrl,
-          defaultImage,
-          twitterUsername,
+          color,
+          twitter,
         },
       },
     }) => {
       const seo = {
         title: title || defaultTitle,
         description: description || defaultDescription,
-        image: `${siteUrl}${image || defaultImage}`,
-        url: `${siteUrl}${pathname || '/'}`,
+        image: thumbnail || `${siteUrl}/thumbnail.png`,
+        url: `${siteUrl}${pathname}`,
+        twitter,
       }
-
       return (
         <Helmet title={seo.title} titleTemplate={titleTemplate}>
+          <html lang={language} />
+
           <meta name="description" content={seo.description} />
           <meta name="image" content={seo.image} />
-          {seo.url && <meta property="og:url" content={seo.url} />}
+          <meta name="theme-color" content={color} />
+          <meta name="application-name" content={site} />
+          <link rel="canonical" href={seo.url} />
+
+          <meta property="og:url" content={seo.url} />
+          <meta property="og:title" content={seo.title} />
+          <meta property="og:description" content={seo.description} />
+          <meta property="og:image" content={seo.image} />
           {article && <meta property="og:type" content="article" />}
-          {seo.title && <meta property="og:title" content={seo.title} />}
-          {seo.description && (
-            <meta property="og:description" content={seo.description} />
-          )}
-          {seo.image && <meta property="og:image" content={seo.image} />}
+
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-title" content={site} />
+          <meta
+            name="apple-mobile-web-app-status-bar-style"
+            content="black-translucent"
+          />
+
+          <meta name="twitter:creator" content={seo.twitter} />
           <meta name="twitter:card" content="summary_large_image" />
-          {twitterUsername && (
-            <meta name="twitter:creator" content={twitterUsername} />
-          )}
-          {seo.title && <meta name="twitter:title" content={seo.title} />}
-          {seo.description && (
-            <meta name="twitter:description" content={seo.description} />
-          )}
-          {seo.image && <meta name="twitter:image" content={seo.image} />}
+          <meta name="twitter:title" content={seo.title} />
+          <meta name="twitter:description" content={seo.description} />
+          <meta name="twitter:image" content={seo.image} />
+          <meta name="twitter:url" content={seo.url} />
         </Helmet>
       )
     }}
@@ -65,16 +76,16 @@ export default ({
 )
 
 const QueryHead = graphql`
-  query SEO {
+  query QueryHead {
     site {
       siteMetadata {
+        site
         defaultTitle: title
-        titleShort
         titleTemplate
         defaultDescription: description
+        language
         siteUrl: url
-        defaultImage: image
-        themeColor
+        color
         twitter
       }
     }

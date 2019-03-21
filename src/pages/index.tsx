@@ -36,7 +36,7 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 20px;
-  background: rgb(0, 53, 128);
+  background: #003580;
 `
 
 export default ({ data, location }: IndexPageProps) => {
@@ -56,7 +56,7 @@ export default ({ data, location }: IndexPageProps) => {
 
 export const indexPageQuery = graphql`
   query IndexPageQuery {
-    image: file(relativePath: { eq: "gnonce-icon.png" }) {
+    image: file(relativePath: { eq: "icon.png" }) {
       ...fluidImage
     }
     site {

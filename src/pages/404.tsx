@@ -56,7 +56,7 @@ export default ({ data, location }: IndexPageProps) => {
 
 export const NotFoundQuery = graphql`
   query NotFoundPageQuery {
-    image: file(relativePath: { eq: "gnonce-icon.png" }) {
+    image: file(relativePath: { eq: "icon.png" }) {
       ...fluidImage
     }
     site {

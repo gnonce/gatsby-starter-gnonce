@@ -2,13 +2,13 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
+    site: `Gnonce`,
     title: `Gnonce Gatsby starter`,
-    titleShort: `Gnonce starter`,
     titleTemplate: `%s - Gnonce`,
     description: `Gatsby + Typescript + Styled Components = 💖`,
+    language: `en`,
     url: `https://gnonce.com`,
-    image: path.resolve(__dirname, 'src/images/gnonce-icon.png'),
-    themeColor: `#fff`,
+    color: `#003580`,
     twitter: 'gnonce',
   },
   plugins: [
@@ -17,6 +17,19 @@ module.exports = {
       options: {
         name: `img`,
         path: `${__dirname}/src/images/`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Gnonce`,
+        short_name: `Gnonce`,
+        start_url: `/`,
+        background_color: `#003580`,
+        theme_color: `#003580`,
+        display: `standalone`,
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
+        include_favicon: true, // Include favicon
       },
     },
     {
@@ -30,5 +43,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-offline`,
   ],
 }
