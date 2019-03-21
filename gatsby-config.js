@@ -2,12 +2,12 @@ const path = require('path')
 
 module.exports = {
   siteMetadata: {
-    site: `Gnonce`,
-    title: `Gnonce Gatsby starter`,
+    site: `Gnonce-starter`,
+    title: `Gnonce Gatsby Starter`,
     titleTemplate: `%s - Gnonce`,
     description: `Gatsby + Typescript + Styled Components = 💖`,
     language: `en`,
-    url: `https://gnonce.com`,
+    url: `https://gnonce-gatsby-starter.netlify.com/`,
     color: `#003580`,
     twitter: 'gnonce',
   },
