@@ -46,7 +46,7 @@ export default ({ data, location }: IndexPageProps) => {
       <Wrapper>
         <Image img={image.childImageSharp} />
         <Heading
-          title={site.siteMetadata.title}
+          title="404 Page not found!"
           subtitle={site.siteMetadata.description}
         />
       </Wrapper>
@@ -54,8 +54,8 @@ export default ({ data, location }: IndexPageProps) => {
   )
 }
 
-export const indexPageQuery = graphql`
-  query IndexPageQuery {
+export const NotFoundQuery = graphql`
+  query NotFoundPageQuery {
     image: file(relativePath: { eq: "gnonce-icon.png" }) {
       ...fluidImage
     }

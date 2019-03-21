@@ -8,17 +8,20 @@ import Head from '../components/Head'
 
 interface ILayoutProps {
   children: any
+  location: {
+    pathname: string
+  }
 }
 
 const Wrapper = styled.div`
   display: flex;
 `
 
-export default ({ children }: ILayoutProps) => {
+export default ({ children, location }: ILayoutProps) => {
   return (
     <Wrapper>
       <GlobalStyles />
-      <Head pathname="moi" />
+      <Head pathname={location.pathname} />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </Wrapper>
   )
