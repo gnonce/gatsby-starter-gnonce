@@ -80,11 +80,11 @@ const QueryHead = graphql`
     site {
       siteMetadata {
         site
+        siteUrl
         defaultTitle: title
         titleTemplate
         defaultDescription: description
         language
-        siteUrl: url
         color
         twitter
       }

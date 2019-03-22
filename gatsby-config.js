@@ -6,8 +6,8 @@ module.exports = {
     title: `Gnonce Gatsby Starter`,
     titleTemplate: `%s - Gnonce`,
     description: `Gatsby + Typescript + Styled Components = 💖`,
+    siteUrl: `https://gnonce-gatsby-starter.netlify.com/`,
     language: `en`,
-    url: `https://gnonce-gatsby-starter.netlify.com/`,
     color: `#003580`,
     twitter: 'gnonce',
   },
@@ -32,6 +32,7 @@ module.exports = {
         include_favicon: true, // Include favicon
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {
