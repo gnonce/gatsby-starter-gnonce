@@ -6,7 +6,7 @@ module.exports = {
     title: `Gatsby Starter Gnonce`,
     titleTemplate: `%s - Gnonce`,
     description: `Gatsby + Typescript + Styled Components = 💖`,
-    siteUrl: `https://gnonce-gatsby-starter.netlify.com/`,
+    siteUrl: `https://gatsby-starter-gnonce.netlify.com/`,
     language: `en`,
     color: `#003580`,
     twitter: 'gnonce',
