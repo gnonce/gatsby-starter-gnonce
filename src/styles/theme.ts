@@ -16,9 +16,6 @@ const mainTheme = {
   palette: {
     darkPrimary: '#FF8515',
     primary: '#FA9F4B',
-    midPrimary: '#FABC83',
-    lightPrimary: '#FFF1E5',
-    black: '#7F7F7F',
     white: '#FFFFFF',
   },
   spacing: {

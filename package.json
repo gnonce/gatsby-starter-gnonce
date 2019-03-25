@@ -1,7 +1,7 @@
 {
   "name": "gnonce-gatsby",
-  "version": "0.1.0",
-  "description": "Gnonce gatsby starter",
+  "version": "1.0.0",
+  "description": "Gatsby Starter Gnonce",
   "private": true,
   "scripts": {
     "build": "gatsby build",
