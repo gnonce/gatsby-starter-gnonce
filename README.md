@@ -7,10 +7,10 @@
   Gatsby + Typescript + Styled Components = 💖
 </h4>
 
-<p align="center"><img src="	https://img.shields.io/maintenance/yes/2019.svg"> <a target="_blank" href="https://gatsby-starter-gnonce.netlify.com/"><img src="https://img.shields.io/website-up-down-green-red/https/gnonce-gatsby-starter.netlify.com.svg"></a> <img src="https://img.shields.io/github/package-json/v/gnonce/gatsby-starter-gnonce.svg?color=blue"> <img src="https://img.shields.io/github/license/gnonce/gatsby-starter-gnonce.svg">
+<p align="center"><img src="	https://img.shields.io/maintenance/yes/2019.svg"> <a target="_blank" href="https://gatsby-starter-gnonce.netlify.com/"><img src="https://img.shields.io/website-up-down-green-red/https/gatsby-starter-gnonce.netlify.com.svg"></a> <img src="https://img.shields.io/github/package-json/v/gnonce/gatsby-starter-gnonce.svg?color=blue"> <img src="https://img.shields.io/github/license/gnonce/gatsby-starter-gnonce.svg">
 </p>
 
-##👩‍💻 Features
+## 👩‍💻 Features
 
 - [x] Google Lighthouse optimized (100/100)
 - [x] Search engine optimization
