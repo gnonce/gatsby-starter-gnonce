@@ -109,7 +109,7 @@ module.exports = [
     │   └── Image
     ├── layout
     │   └── index
-    ├── pages
+    ├── containers
     │   ├── index
     │   └── 404
     ├── styles
