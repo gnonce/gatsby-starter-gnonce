@@ -20,10 +20,12 @@
 - [x] Sitemap support
 - [x] Offline support
 - [x] Easy to use media queries
+- [x] Custom routes using separate routing file
 - [x] Using Typescript
 - [x] Using styled-components
 - [x] Using Prettier
 - [x] Using tslint
+
 
 ## 🚀 Quick start
 
@@ -51,7 +53,7 @@
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `awesome-site` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+    Open the `awesome-site` directory in your code editor of choice and edit `src/containers/index.tsx`. Save your changes and the browser will update in real time!
 
 ## ⚡️ Deploy
 
@@ -64,6 +66,33 @@ Netlify is a unified platform that automates your code to create high-performant
 <a href="https://www.gatsbyjs.org/docs/deploying-and-hosting/">Read more</a> about deploying your Gatsby site to Netlify or some other provider!
 
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/gnonce/gatsby-starter-gnonce" target="_blank"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
+
+
+
+
+
+
+
+## 🛣 Routing
+
+This starter uses [custom routing plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-routes/) to separate routing configurations into external configuration file. Routes are defined in `/src/routes.ts` file by default. Path to external config can be changed in `gatsby-config.js` file.
+
+### Example on how to map component to route using routes.ts
+```
+// In your routes configuration file (routes.ts)
+const path = require('path');
+module.exports = [
+  {
+    path: '/',
+    component: path.resolve(`src/containers/Home.jsx`)
+  },
+  {
+    path: '/404/',
+    component: path.resolve(`src/containers/404.js`)
+  }
+];
+```
+
 
 ## 🤓 What's inside?
 
