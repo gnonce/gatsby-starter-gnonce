@@ -1,14 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
-import Img from 'gatsby-image'
+import Img, { GatsbyImageFluidProps } from 'gatsby-image'
 
 import { media } from '../styles/styleUtils'
 
 interface IImageProps {
-  img: {
-    fluid: any
-  }
+  img: GatsbyImageFluidProps
 }
 
 const Wrapper = styled.div`

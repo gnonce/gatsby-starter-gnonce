@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactChild } from 'react'
 import styled, { ThemeProvider } from 'styled-components'
 
 import theme from '../styles/theme'
@@ -7,7 +7,7 @@ import GlobalStyles from '../styles/globalStyles'
 import Head from '../components/Head'
 
 interface ILayoutProps {
-  children: any
+  children: ReactChild
   location: {
     pathname: string
   }

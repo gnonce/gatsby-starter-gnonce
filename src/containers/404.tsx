@@ -2,12 +2,12 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
-// Layout
 import Layout from '../layout/index'
 
-// Components
 import Image from '../components/Image'
 import Heading from '../components/Heading'
+
+import { GatsbyImageFluidProps } from 'gatsby-image'
 
 interface IndexPageProps {
   location: {
@@ -15,9 +15,7 @@ interface IndexPageProps {
   }
   data: {
     image: {
-      childImageSharp: {
-        fluid: any
-      }
+      childImageSharp: GatsbyImageFluidProps
     }
     site: {
       siteMetadata: {
