@@ -17,5 +17,6 @@ public
 .env.development.local
 .env.test.local
 .env.production.local
+yarn.lock
 
 npm-debug.log*
