@@ -24,7 +24,7 @@
 - [x] Using Typescript
 - [x] Using styled-components
 - [x] Using Prettier
-- [x] Using tslint
+- [x] Using eslint
 
 
 ## 🚀 Quick start
